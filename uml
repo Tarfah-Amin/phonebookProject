@@ -129,8 +129,8 @@ class Node {
 }
 
 class Phonebook {
-    + static BST allContactsBST
-    + static LinkedList EventList
+    + {static} BST allContactsBST
+    + {static} LinkedList EventList
     
     + Phonebook()
     + checkBeforeAdd(Contact contact): boolean
@@ -140,19 +140,19 @@ class Phonebook {
     + DeleteAllEventsWithContact(String t, LinkedList L)
     + DeletEvent(String Titel, String n)
     + searchName(String n): Contact
-    + searchEventTitle(String n): Event
+    + {static}searchEventTitle(String n): Event
     + SearchFname(String n): LinkedList
     + SearchEmail(String e): LinkedList
     + SearchDOB(String d): LinkedList
     + searchAddress(String address): LinkedList
     + SearchPhone(String p): Contact
     + printName(LinkedList list)
-    + printBSTofallcontacts(BSTNode node)
-    + printLinkedListofallcontacts(LinkedList L)
+    + {static}printBSTofallcontacts(BSTNode node)
+    + {static}printLinkedListofallcontacts(LinkedList L)
     + printLinkedListOfEvents(LinkedList List)
     + GetEventsInContact(String n): LinkedList
     + GetContactInEvent(String n): LinkedList
-    + PrintEvenInfo(String title)
+    + {static}PrintEvenInfo(String title)
     + isConflict(Event e, Contact c)
     + scheduleEvent(Event e, String contactName)
 }
