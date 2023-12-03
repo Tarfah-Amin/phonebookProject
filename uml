@@ -1,0 +1,158 @@
+class BST {
+    - BSTNode root
+    - BSTNode current
+    
+    + BST()
+    + empty(): boolean
+    + clear()
+    + full(): boolean
+    + retrieve(): T
+    + findKey(String k): boolean
+    - remove_aux(String key, BSTNode p, boolean flag): BSTNode
+    - find_min(BSTNode p): BSTNode
+    + update(String key, T data): boolean
+    + inOrder()
+    - inOrder(BSTNode p)
+    + isPhoneExist(String phone)
+    - checkPhoneInOrder(BSTNode p, String phone)
+    + SearchFname(String fname): LinkedList
+    - RecSearchByFirstName(BSTNode p, LinkedList res, String fname)
+    + searchByPhoneNumber(String phoneNumber): Contact
+    - recSearchByPhoneNumber(BSTNode p, String phoneNumber)
+    - RecSearchByEmail(BSTNode p, LinkedList res, String Email)
+    + SearchDOB(String dob): LinkedList
+    - RecSearchByDOB(BSTNode p, LinkedList res, String dob)
+    + SearchAddress(String add): LinkedList
+    - RecSearchByAddress(BSTNode p, LinkedList res, String add)
+}
+
+class BSTNode {
+    + String key
+    + T data
+    + BSTNode left
+    + BSTNode right
+    
+    + BSTNode(String k, T val)
+    + BSTNode(String k, T val, BSTNode l, BSTNode r)
+}
+
+class Contact {
+    - String name
+    - String phoneNumber
+    - String email
+    - String address
+    - String birthday
+    - String notes
+    + LinkedList relatedEvent
+    
+    + Contact()
+    + Contact(String name, String phoneNumber, String email, String address, String birthday, String notes)
+    + Contact(Contact c)
+    + getName(): String
+    + setName(String name)
+    + getPhoneNumber(): String
+    + setPhoneNumber(String phoneNumber)
+    + getEmail(): String
+    + setEmail(String email)
+    + getAddress(): String
+    + setAddress(String address)
+    + getBirthday(): String
+    + setBirthday(String birthday)
+    + getNotes(): String
+    + setNotes(String notes)
+    + compareTo(String comparedName): int
+    + compareTo(Contact comparedContact): int
+    + setRelatedEvent(LinkedList relatedEvent)
+    + toString(): String
+}
+
+class Event {
+    - String eventTitle
+    - String location
+    - LocalDate eventDate
+    - LocalTime startTime
+    - LocalTime endTime
+    - String contactName
+    - Contact contactInvolved
+    - boolean isEvent
+    - LinkedList<Event> allEvents
+    - LinkedList<Contact> contactInEvent
+    
+    + Event()
+    + Event(String eventTitle, String location, LocalDate eventDate, LocalTime startTime, LocalTime endTime, String contactName, boolean isEvent)
+    + getEventTitle(): String
+    + setEventTitle(String eventTitle)
+    + getLocation(): String
+    + setLocation(String location)
+    + getEventDate(): LocalDate
+    + setEventDate(LocalDate eventDate)
+    + getStartTime(): LocalTime
+    + setStartTime(LocalTime startTime)
+    + getEndTime(): LocalTime
+    + setEndTime(LocalTime endTime)
+    + getContactName(): String
+    + setContactName(String contactName)
+    + isIsEvent(): boolean
+    + setIsEvent(boolean isEvent)
+    + getContactInEvent(): LinkedList
+    + toString(): String
+    + setContactInvolved(Contact contactInvolved)
+    + compareTo(String comparedName): int
+    + compareTo(Event comparedEvent): int
+}
+
+class LinkedList {
+    - Node<T> Head
+    - Node<T> current
+    - int size
+    
+    + isEmpty(): boolean
+    + isFull(): boolean
+    + last(): boolean
+    + FindFirst()
+    + FindNext()
+    + update(T d)
+    + retrieve(): T
+    + insert(T d)
+    + remove()
+    + search(T d): boolean
+    + dispaly()
+    + AddSorted(T d)
+    + AddSortedEvent(T d)
+}
+
+class Node {
+    - T data
+    - Node next
+    
+    + Node(T data)
+}
+
+class Phonebook {
+    + static BST allContactsBST
+    + static LinkedList EventList
+    
+    + Phonebook()
+    + checkBeforeAdd(Contact contact): boolean
+    + addContact(Contact contact)
+    + addEvent(Event e)
+    + deleteContact(String n)
+    + DeleteAllEventsWithContact(String t, LinkedList L)
+    + DeletEvent(String Titel, String n)
+    + searchName(String n): Contact
+    + searchEventTitle(String n): Event
+    + SearchFname(String n): LinkedList
+    + SearchEmail(String e): LinkedList
+    + SearchDOB(String d): LinkedList
+    + searchAddress(String address): LinkedList
+    + SearchPhone(String p): Contact
+    + printName(LinkedList list)
+    + printBSTofallcontacts(BSTNode node)
+    + printLinkedListofallcontacts(LinkedList L)
+    + printLinkedListOfEvents(LinkedList List)
+    + GetEventsInContact(String n): LinkedList
+    + GetContactInEvent(String n): LinkedList
+    + PrintEvenInfo(String title)
+    + isConflict(Event e, Contact c)
+    + scheduleEvent(Event e, String contactName)
+}
