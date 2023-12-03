@@ -156,3 +156,10 @@ class Phonebook {
     + isConflict(Event e, Contact c)
     + scheduleEvent(Event e, String contactName)
 }
+
+BST "1" *-- "0..*" BSTNode : contains
+Contact "1" *-- "1" LinkedList : has
+Event "1" *-- "1" LinkedList : contains
+LinkedList "1" *-- "0..*" Node : has
+Phonebook "1" -- "1" BST : manages
+Phonebook "1" -- "1" LinkedList : manages
