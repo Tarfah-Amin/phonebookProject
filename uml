@@ -73,7 +73,6 @@ class Event {
     - LocalTime startTime
     - LocalTime endTime
     - String contactName
-    - Contact contactInvolved
     - boolean isEvent
     + LinkedList<Event> allEvents
     + LinkedList<Contact> contactInEvent
