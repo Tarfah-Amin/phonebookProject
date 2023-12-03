@@ -1,3 +1,6 @@
+class Main {
+    + main(String[] args)
+}
 class BST {
     - BSTNode root
     - BSTNode current
@@ -165,3 +168,7 @@ Event "1" *-- "1" LinkedList : contains
 LinkedList "1" *-- "0..*" Node : has
 Phonebook "1" -- "1" BST : manages
 Phonebook "1" -- "1" LinkedList : manages
+Main --|> Phonebook
+Main --> Phonebook
+Main --> Contact
+Main --> Event
