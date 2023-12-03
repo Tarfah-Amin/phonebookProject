@@ -1,0 +1,269 @@
+public class BST {
+
+    BSTNode root, current;
+    
+    public BST() {}
+
+    public boolean empty() {}
+
+    public void clear() {}
+
+    public boolean full() {}
+
+    public T retrieve() {}
+
+    public boolean findKey(String k) {}
+
+    private BSTNode remove_aux(String key, BSTNode p, boolean flag) {}
+
+    private BSTNode find_min(BSTNode p) {}
+
+    public boolean update(String key, T data) {}
+    
+    public void inOrder(){} 
+    private void inOrder(BSTNode p){}
+    
+    public boolean isPhoneExist(String phone) {}
+
+    private boolean checkPhoneInOrder(BSTNode p, String phone) {}
+
+    public LinkedList SearchFname(String fname) {}
+
+    private void RecSearchByFirstName(BSTNode p, LinkedList res, String fname) { }
+
+
+public Contact searchByPhoneNumber(String phoneNumber) {}
+
+private Contact recSearchByPhoneNumber(BSTNode p, String phoneNumber) {}
+
+  
+    private void RecSearchByEmail(BSTNode p, LinkedList res, String Email) {}
+    
+    public LinkedList SearchDOB(String dob) {}
+    
+    private void RecSearchByDOB(BSTNode p, LinkedList res, String dob) {}
+    
+    
+    
+      public LinkedList SearchAddress(String add) {}
+    
+    private void RecSearchByAddress(BSTNode p, LinkedList res, String add) {}
+}
+public class BSTNode {
+
+    public String key;
+    public T data;
+    public BSTNode left, right;
+    public BSTNode(String k, T val) {}
+
+    public BSTNode(String k, T val, BSTNode l, BSTNode r) {}}
+
+public class Contact implements Comparable{ 
+    private String name;
+    private String phoneNumber;
+    private String email;
+    private String address;
+    private String birthday ;
+    private String notes;
+
+    public LinkedList relatedEvent = new LinkedList();
+    
+    
+    
+    Contact(){}
+
+    public Contact(String name, String phoneNumber, String email, String address, String birthday, String notes) {}
+    
+    
+    public Contact(Contact c) {}
+    
+
+    public String getName() {}
+
+    public void setName(String name) {}
+
+    public String getPhoneNumber() {}
+
+    public void setPhoneNumber(String phoneNumber) {}
+
+    public String getEmail() {}
+
+    public void setEmail(String email) {}
+
+    public String getAddress() {}
+
+    public void setAddress(String address) {}
+
+    public String getBirthday() {}
+
+    public void setBirthday(String birthday) {}
+
+    public String getNotes() {}
+
+    public void setNotes(String notes) {}
+
+    @Override
+    public int compareTo(String comparedName) {}
+    
+    public int compareTo(Contact comparedCOntact) {
+    }
+
+    public void setRelatedEvent(LinkedList relatedEvent) {
+    }
+
+    
+    @Override
+    public String toString() { }
+}
+
+public class Event implements Comparable{
+    private String eventTitle ,location;
+    private LocalDate eventDate;
+    private LocalTime startTime ,endTime;
+    private String contactName;
+    private Contact contactInvolved ;
+    private boolean isEvent;
+    public LinkedList<Event> allEvents = new LinkedList();
+    public LinkedList<Contact> contactInEvent = new LinkedList();//it's only required to be bst in the phonebook class the rest is left for us
+    
+    public Event() {}
+
+    
+
+    public Event(String eventTitle, String location, LocalDate eventDate, LocalTime startTime, LocalTime endTime, String contactName , boolean isEvent) {}
+
+    public String getEventTitle() {}
+
+    public void setEventTitle(String eventTitle) {}
+
+    public String getLocation() {}
+
+    public void setLocation(String location) {}
+
+    public LocalDate getEventDate() {}
+
+    public void setEventDate(LocalDate eventDate) {}
+
+    public LocalTime getStartTime() {}
+
+    public void setStartTime(LocalTime startTime) {}
+
+    public LocalTime getEndTime() {}
+
+    public void setEndTime(LocalTime endTime) {}
+
+    public String getContactName() {}
+
+    public void setContactName(String contactName) {}
+
+    public boolean isIsEvent() {}
+
+    public void setIsEvent(boolean isEvent) {}
+    
+    public LinkedList getContactInEvent() {}
+    
+    
+
+    @Override
+    public String toString() {}
+
+     void setContactInvolved(Contact contactInvolved) {}
+
+   @Override
+    public int compareTo(String comparedName) {}
+    
+    public int compareTo(Event comparedEvent) {}
+}
+
+
+public class LinkedList {
+private Node<T> Head;
+    private Node<T> current;
+    private int size;
+
+    public boolean isEmpty(){}
+
+    public boolean isFull(){}
+
+    public boolean last(){}
+
+    public void FindFirst(){}
+
+    public void FindNext() {}
+
+    public void update(T d) {}
+
+    public T retrieve(){}
+
+    public void insert(T d){}
+
+    public void remove(){}
+
+    public boolean search(T d) {}
+
+    public void dispaly(){}
+
+    public void AddSorted(T d) {}
+    
+ public void AddSortedEvent(T d) {}
+    
+}
+
+public class Node {
+    public T data;
+    public Node  next;
+
+    public Node (T data){}
+
+}
+
+public class Phonebook {
+
+    public static BST allContactsBST;
+    public static LinkedList EventList;
+
+    public Phonebook() {}
+
+    public boolean checkBeforeAdd(Contact contact) {}
+    public void addContact(Contact contact) {}
+
+    public void addEvent(Event e) {}
+    public void deleteContact(String n) {}
+
+    public void DeleteAllEventsWithContact(String t, LinkedList L) {}
+
+    public void DeletEvent(String Titel, String n) {}
+
+    public Contact searchName(String n) {}
+
+    public static Event searchEventTitle(String n) {}
+
+    public LinkedList SearchFname(String n) {}
+
+    public LinkedList SearchEmail(String e) {}
+
+    public LinkedList SearchDOB(String d) {}
+
+    public LinkedList searchAddress(String address) {}
+
+    public Contact SearchPhone(String p) {}
+  
+    public void printName(LinkedList list) {}
+
+    public static void printBSTofallcontacts(BSTNode node) {}
+
+    public static void printLinkedListofallcontacts(LinkedList L) {}
+
+    public void printLinkedListOfEvents(LinkedList List) {}
+
+    public LinkedList GetEventsInContact(String n) {}
+
+    public LinkedList GetContactInEvent(String n) {}
+
+    public static void PrintEvenInfo(String title) {}
+
+    public boolean isConflict(Event e, Contact c) {}
+
+    public void scheduleEvent(Event e, String contactName) {}
+
+}
