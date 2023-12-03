@@ -4,26 +4,28 @@ class BST {
     
     + BST()
     + empty(): boolean
-    + clear()
+    + clear(): void
     + full(): boolean
     + retrieve(): T
-    + findKey(String k): boolean
-    - remove_aux(String key, BSTNode p, boolean flag): BSTNode
-    - find_min(BSTNode p): BSTNode
-    + update(String key, T data): boolean
-    + inOrder()
-    - inOrder(BSTNode p)
-    + isPhoneExist(String phone)
-    - checkPhoneInOrder(BSTNode p, String phone)
-    + SearchFname(String fname): LinkedList
-    - RecSearchByFirstName(BSTNode p, LinkedList res, String fname)
-    + searchByPhoneNumber(String phoneNumber): Contact
-    - recSearchByPhoneNumber(BSTNode p, String phoneNumber)
-    - RecSearchByEmail(BSTNode p, LinkedList res, String Email)
-    + SearchDOB(String dob): LinkedList
-    - RecSearchByDOB(BSTNode p, LinkedList res, String dob)
-    + SearchAddress(String add): LinkedList
-    - RecSearchByAddress(BSTNode p, LinkedList res, String add)
+    + findKey(k: String): boolean
+    + insert(k: String, val: T): boolean
+    + removeKey(k: String): boolean
+    - find_min(p: BSTNode<T>): BSTNode<T>
+    + update(key: String, data: T): boolean
+    + inOrder(): void
+    - inOrder(p: BSTNode<Contact>): void
+    + isPhoneExist(phone: String): boolean
+    - checkPhoneInOrder(p: BSTNode<Contact>, phone: String): boolean
+    + SearchFname(fname: String): LinkedList<Contact>
+    - RecSearchByFirstName(p: BSTNode<T>, res: LinkedList<Contact>, fname: String): void
+    + searchByPhoneNumber(phoneNumber: String): Contact
+    - recSearchByPhoneNumber(p: BSTNode<T>, phoneNumber: String): Contact
+    + SearchEmail(mail: String): LinkedList<Contact>
+    - RecSearchByEmail(p: BSTNode<T>, res: LinkedList<Contact>, email: String): void
+    + SearchDOB(dob: String): LinkedList<Contact>
+    - RecSearchByDOB(p: BSTNode<T>, res: LinkedList<Contact>, dob: String): void
+    + SearchAddress(add: String): LinkedList<Contact>
+    - RecSearchByAddress(p: BSTNode<T>, res: LinkedList<Contact>, add: String): void
 }
 
 class BSTNode {
