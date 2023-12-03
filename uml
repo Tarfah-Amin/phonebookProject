@@ -75,8 +75,8 @@ class Event {
     - String contactName
     - Contact contactInvolved
     - boolean isEvent
-    - LinkedList<Event> allEvents
-    - LinkedList<Contact> contactInEvent
+    + LinkedList<Event> allEvents
+    + LinkedList<Contact> contactInEvent
     
     + Event()
     + Event(String eventTitle, String location, LocalDate eventDate, LocalTime startTime, LocalTime endTime, String contactName, boolean isEvent)
@@ -122,8 +122,8 @@ class LinkedList {
 }
 
 class Node {
-    - T data
-    - Node next
+    + T data
+    + Node next
     
     + Node(T data)
 }
