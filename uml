@@ -145,6 +145,7 @@ class Phonebook {
     + DeletEvent(String Titel, String n)
     + searchName(String n): Contact
     + {static}searchEventTitle(String n): Event
+    + {static}searchEventTitle1(String n): Even
     + SearchFname(String n): LinkedList
     + SearchEmail(String e): LinkedList
     + SearchDOB(String d): LinkedList
