@@ -155,6 +155,7 @@ class Phonebook {
     + {static}PrintEvenInfo(String title)
     + isConflict(Event e, Contact c)
     + scheduleEvent(Event e, String contactName)
+    + scheduleAppointment(Event e, String contactName)
 }
 
 BST "1" *-- "0..*" BSTNode : contains
